@@ -16,7 +16,7 @@ A beginner-friendly manual for privacy and data-training settings in popular AI 
   - `06-printable-checklist.md` — a printable one-page checklist
   - `07-help-links.md` — official help links for each company
 - **`static/`** — a small static website mirroring every doc page as HTML (9 pages) with shared CSS. No build step; open any `.html` file in a browser.
-- **`README.md`** — project overview; credits Asdale Dynamics, LLC.
+- **`README.md`** — improved project overview; warmer tone, full table of contents linking to each doc page, usage instructions, credits Asdale Dynamics, LLC. (Fixed a broken reference to `docs/help-links.md` → corrected to `docs/07-help-links.md`.)
 - **`LICENSE`** — MIT License, copyright line exactly `Copyright (c) 2026 Asdale Dynamics, LLC`.
 - **`package.json` + `verify.js`** — verification script (`npm test` / `npm run lint`).
 - **`STATUS.md`** — this file.
@@ -43,6 +43,12 @@ All pages are dated October 27, 2026 and written in plain English with official 
 - Printable checklist contains checkbox items
 
 Exit code: 0.
+
+## Changes made in this critical review
+
+- Fixed a broken reference in `README.md` (`docs/help-links.md` → `docs/07-help-links.md`).
+- Rewrote `README.md` for a warmer, more polished tone with a full table of contents linking to each doc page and clear usage instructions.
+- Re-ran `npm test`: all checks still pass.
 
 ## Known gaps
 
