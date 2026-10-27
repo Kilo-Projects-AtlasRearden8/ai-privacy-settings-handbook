@@ -1,0 +1,217 @@
+/* AI Privacy Settings Handbook — static site styles */
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --chip: #eff6ff;
+  --warn: #fffbeb;
+  --warn-border: #fde68a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--accent-hover); }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo span { color: var(--accent); }
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav a {
+  font-size: 0.92rem;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+nav a:hover, nav a.active {
+  background: var(--chip);
+  color: var(--accent);
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2rem 2rem 2.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 1.75rem 0 0.6rem;
+  color: #111827;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.4rem;
+  color: #374151;
+}
+
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem 1.25rem; }
+li { margin-bottom: 0.35rem; }
+
+.date-tag {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.date-tag strong { color: var(--ink); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: #f9fafb; color: #374151; font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.03em; }
+
+tr:nth-child(even) td { background: #fafafa; }
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.callout {
+  background: var(--warn);
+  border: 1px solid var(--warn-border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.94rem;
+}
+
+.callout strong { color: #92400e; }
+
+nav.page-nav {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.page-nav a {
+  text-decoration: none;
+  background: var(--chip);
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.page-nav a:hover { background: #dbeafe; color: var(--accent); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 2rem 1.25rem 3rem;
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+footer p { margin: 0.25rem 0; }
+
+.print-only { display: none; }
+
+@media (max-width: 520px) {
+  header .inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  nav { margin-left: 0; }
+  article { padding: 1.25rem 1rem 1.75rem; }
+  h1 { font-size: 1.45rem; }
+}
+
+@media print {
+  body { background: #fff; }
+  header, nav.page-nav, footer { display: none; }
+  article { border: none; box-shadow: none; padding: 0; }
+  .print-only { display: block; }
+  a { text-decoration: none; color: inherit; }
+}

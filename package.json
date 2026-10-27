@@ -1,0 +1,15 @@
+{
+  "name": "ai-privacy-settings-handbook",
+  "version": "1.0.0",
+  "description": "Beginner manual for AI privacy and data-training settings, with docs/ and a static site/ mirror. By Asdale Dynamics, LLC.",
+  "private": true,
+  "scripts": {
+    "test": "node verify.js",
+    "lint": "node verify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "file:///workspace/kilo-lab/ai-privacy-settings-handbook"
+  },
+  "license": "MIT"
+}
